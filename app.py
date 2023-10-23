@@ -16,7 +16,7 @@ with st.sidebar:
     st.title('🦙💬 Llama 2 Chatbot')
     # replicate_api = st.text_input('Enter Replicate API token:', type='password')
     # os.environ['REPLICATE_API_TOKEN'] = replicate_api
-    replicate_api_key = st.secrets["replicate_api_key"]
+    replicate_api = st.secrets["replicate_api_key"]
 
     st.subheader('Models and parameters')
     selected_model = st.sidebar.selectbox('Choose a Llama2 model', ['Llama2-7B', 'Llama2-13B'], key='selected_model')
