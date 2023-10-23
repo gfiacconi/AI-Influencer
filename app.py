@@ -5,7 +5,8 @@ from elevenlabs import clone, generate, play
 from elevenlabs import set_api_key
 import openai
 
-replicate_api_key = st.secrets["replicate_api_key"]
+# Set ElevenLabs API key
+replicate_api_key = st.secrets["elevenlabs_api_key"]
 
 # App title
 st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
@@ -13,8 +14,9 @@ st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
 # Replicate Credentials
 with st.sidebar:
     st.title('🦙💬 Llama 2 Chatbot')
-    replicate_api = st.text_input('Enter Replicate API token:', type='password')
-    os.environ['REPLICATE_API_TOKEN'] = replicate_api
+    # replicate_api = st.text_input('Enter Replicate API token:', type='password')
+    # os.environ['REPLICATE_API_TOKEN'] = replicate_api
+    replicate_api_key = st.secrets["replicate_api_key"]
 
     st.subheader('Models and parameters')
     selected_model = st.sidebar.selectbox('Choose a Llama2 model', ['Llama2-7B', 'Llama2-13B'], key='selected_model')
