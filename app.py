@@ -5,8 +5,7 @@ from elevenlabs import clone, generate, play
 from elevenlabs import set_api_key
 import openai
 
-set_api_key("dfd294fe04974698062cc1d71199838f")
-
+replicate_api_key = st.secrets["replicate_api_key"]
 
 # App title
 st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
