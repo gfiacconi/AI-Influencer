@@ -6,7 +6,7 @@ from elevenlabs import set_api_key
 import openai
 
 # Set ElevenLabs API key
-replicate_api_key = st.secrets["elevenlabs_api_key"]
+elevenlabs_api_key = st.secrets["elevenlabs_api_key"]
 
 # App title
 st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
