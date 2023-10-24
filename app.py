@@ -158,6 +158,15 @@ def main():
     st.sidebar.title("Impostazioni")
     max_response_length = st.sidebar.slider("Lunghezza massima della risposta", min_value=100, max_value=1000, value=500)
 
+    st.sidebar.title("Voice")
+    voice = st.sidebar.selectbox(
+        "Which voice do you want?",
+        ("Giorgia", "Gabriele"),
+        index=None,
+        placeholder="Select a voice...",
+    )
+
+
     # Clear Conversation Button
     st.sidebar.title("Clear Conversation")
     clear_conversation = st.sidebar.button("Clear Conversation")
@@ -233,7 +242,7 @@ def main():
                     full_response += item
 
                 # Convert the text response to audio using ElevenLabs
-                audio_response = generate(text=full_response, voice="Giorgia", model="eleven_multilingual_v2")
+                audio_response = generate(text=full_response, voice=voice, model="eleven_multilingual_v2")
                 # Display the audio in Streamlit
                 st.audio(audio_response, format="audio/wav")
         
