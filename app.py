@@ -19,7 +19,8 @@ import openai
 from pydantic import model_validator
 
 
-replicate_api = st.secrets["replicate_api_key"]
+# Set ElevenLabs API key
+elevenlabs_api_key = st.secrets["elevenlabs_api_key"]
 
 # Function to extract text from PDF
 
