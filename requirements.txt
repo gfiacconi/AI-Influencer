@@ -2,3 +2,12 @@ streamlit
 replicate
 elevenlabs
 openai
+PyPDF2
+numpy
+faiss-cpu
+wand
+pytesseract
+tiktoken
+pdf2image
+streamlit-chat
+imagemagick
