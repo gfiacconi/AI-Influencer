@@ -14,14 +14,13 @@ from pdf2image import convert_from_path
 import openai.api_resources.completion
 from streamlit_chat import message
 from elevenlabs import clone, generate, play
-from elevenlabs import set_api_key
 import openai
 from pydantic import model_validator
-
+from elevenlabs import set_api_key
 
 # Set ElevenLabs API key
-elevenlabs_api_key = st.secrets["elevenlabs_api_key"]
-
+# elevenlabs_api_key = st.secrets["elevenlabs_api_key"]
+set_api_key("dfd294fe04974698062cc1d71199838f")
 # Function to extract text from PDF
 
 def extract_text_from_pdf(pdf_file):
