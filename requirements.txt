@@ -10,4 +10,3 @@ pytesseract
 tiktoken
 pdf2image
 streamlit-chat
-imagemagick
